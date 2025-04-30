@@ -1,0 +1,72 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+min-height: 100vh;
+background: url('spiderman.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+background-color: white;
+box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+nav ul{
+width: 100%;
+list-style: none;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+nav ul li{
+height: 50px;
+}
+nav a{
+height: 100%;
+padding: 0  30px;
+text-decoration: none;
+display: flex;
+align-items: center;
+color: black;
+}
+nav a:hover{
+background-color: gray;
+}
+nav li:first-child{
+margin-right:auto;
+}
+.sidebar{
+position: fixed;
+top: 0;
+right: 0;
+width: 200px;
+height: 100vh;
+background-color: rgb(123, 94, 94);
+backdrop-filter: 50px;
+list-style: none;
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+}
+.sidebar li{
+width: 100%;
+}
+.sidebar a{
+width: 100%;   
+}
+.menu-button{
+display: none;
+}
+@media (max-width: 500px){
+.hideOnMobile{
+display: none;
+}
+.menu-button{
+display: block;
+}
+}

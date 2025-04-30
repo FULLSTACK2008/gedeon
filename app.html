@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Street Light Monitoring</title>
     <style>
-    *{
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+* {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-    }
-nav{
+font-family: Arial, sans-serif;
+}
+        
+body {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+        
+nav {
 display: flex;
 margin-top: 30px;
 justify-content: space-between;
-background-color: white;
-height: 5px;
+align-items: center;
+padding: 0 20px;
+flex-wrap: wrap;
 }
-.hello{
+        
+.hello {
 color: blue;
 text-transform: uppercase;
-
 }
-a{
+        
+.nav-links {
+display: flex;
+gap: 15px;
+}
+        
+a {
 align-content: center;
 justify-content: center;
 align-items: center;
@@ -30,164 +46,240 @@ text-decoration: none;
 padding: 10px;
 color: black;
 font-weight: bold;
-}
-.content{
-
+white-space: nowrap;
+        }
+        
+.content {
 margin-top: 50px;
 background-color: blue;
 color: white;
 text-align: center;
+padding: 40px 20px;
 }
-.h2{
+        
+.h2 {
 padding-bottom: 20px;
+}     
+.mine {
+padding-bottom: 20px;
+font-size: 18px;
+max-width: 800px;
+margin: 0 auto;
 }
-.mine{
-    padding-bottom: 20px;
-    font-size: 18px;
-}
-button{
+        
+button {
 border: none;
 background-color: white;
-height: 30px;
-width: 100px;
+height: 40px;
+width: 150px;
 border-radius: 10px;
 margin-bottom: 9px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
 }
-.features{
+        
+button:hover {
+ transform: scale(1.05);
+background-color: #f0f0f0;
+}
+        
+.features-container, .how-it-works, .testimonials {
+padding: 40px 20px;
+}
+        
+.section-title {
+text-align: center;
+margin-bottom: 30px;
+font-size: 2rem;
+}
+        
+.features, .steps, .users {
 display: flex;
 justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+max-width: 1200px;
+margin: 0 auto;
 }
-
-
- .energy{
-border: 1px solid white;
+        
+.energy, .energy1, .para {
+border: 1px solid #f0f0f0;
 width: 300px;
-height: 150px;
+min-height: 150px;
 background-color: white;
 border-radius: 15px;
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-margin-top: 20px;
-margin-left: 50px;
-
-
+padding: 20px;
+transition: transform 0.3s ease;
 }
-.energy h2{
+        
+.energy:hover, .energy1:hover, .para:hover {
+            transform: translateY(-5px);
+}
+        
+.energy h2, .energy1 h2 {
 padding: 5px;
 color: darkblue;
 font-weight: bold;
 text-align: center;
+margin-bottom: 10px;
 }
-.energy p{
+        
+.energy p, .energy1 p, .para p {
 text-align: center;
 padding: 5px;
+color: #555;
 }
-.hq{
-margin-top: 30px;
-}
-.power{
+        
+.power {
 background-color: antiquewhite;
-justify-content: center;
-display: flex;
-text-align: center; 
-height: 30vh;
+padding: 40px 20px;
 }
-.power .energy1{
-    border: 1px solid white;
-width: 300px;
-height: 150px;
-background-color: white;
-border-radius: 15px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-margin-top: 20px;
-margin-left: 50px;
-}
-.energy1 h2{
-    padding: 5px;
-color: darkblue;
-font-weight: bold;
-text-align: center;
-}
-.users{
-display: flex;
-justify-content: center;
-}
-.para{
-    border: 1px solid white;
-width: 300px;
-height: 150px;
-background-color: white;
-border-radius: 15px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-margin-top: 20px;
-margin-left: 50px;
-}
-footer{
+        
+footer {
 background-color: black;
 color: white;
+padding: 40px 20px;
+margin-top: auto;
 }
-.info{
+        
+.info {
 display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+gap: 30px;
 }
-.links a{
+        
+.links a {
 color: white;
-padding-bottom: 15px;
+padding: 5px 0;
+display: block;
 }
-.links h2{
-padding: 5px;
-padding-bottom: 5px;
+        
+.links h2, .contact h2, .follow h2 {
+padding: 5px 0;
+margin-bottom: 15px;
+font-size: 1.5rem;
 }
-.contact {
-padding-left: 400px;
+        
+.contact p {
+padding: 5px 0;
 }
-.contact p{
-padding: 10px;
+        
+.follow a {
+color: white;
+padding: 5px 0;
+display: block;
 }
-    </style>
+        
+.follow i {
+margin-right: 10px;
+width: 20px;
+}
+        
+        
+@media (max-width: 768px) {
+nav {
+flex-direction: column;
+gap: 15px;
+}
+            
+.nav-links {
+flex-wrap: wrap;
+justify-content: center;
+}
+            
+.content {
+padding: 30px 15px;
+}
+            
+.mine {
+font-size: 16px;
+}
+            
+.info {
+flex-direction: column;
+gap: 30px;
+}
+            
+.contact, .follow {
+padding-left: 0;
+margin-left: 0;
+}
+            
+.energy, .energy1, .para {
+width: 100%;
+max-width: 350px;
+}
+}
+        
+@media (max-width: 480px) {
+.content h1 {
+font-size: 1.8rem;
+}
+            
+.mine {
+font-size: 14px;
+}
+            
+button {
+width: 120px;
+height: 35px;
+}
+            
+.section-title {
+font-size: 1.5rem;
+}
+            
+.energy h2, .energy1 h2 {
+font-size: 1.2rem;
+}
+}
+</style>
 </head>
 <body>
-<nav>
+    <nav class="navbar">
 <h1 class="h1"><span class="hello">smart</span>Light</h1>
-<div>
-<a href="">Features</a>
-<a href="">Howitworks</a>
+<div class="nav-links">
+<a href="https://www.youtube.com/">Features</a>
+<a href="">How it works</a>
 <a href="">Testimonials</a>
+</div>
 </nav>
+    
 <div class="content">
-<h1 class="h2">smart street Light Monitoring System</h1>
-<p class="mine">optimize your street lighting with loT technology for energy efficiency and
-proactive maintenance
-</p>
+<h1 class="h2">Smart Street Light Monitoring System</h1>
+<p class="mine">Optimize your street lighting with IoT technology for energy efficiency and proactive maintenance</p>
 <button>Get Started</button>
 </div>
 
-<center><h1 class="hq">FEATURES</h1></center>
+<div class="features-container">
+<h1 class="section-title">FEATURES</h1>
 <div class="features">
 <div class="energy">
-<h2>energy efficiency</h2>
-<p>Reduce energy consumption by adapting light intensity
-based on real-time conditions
-</p>
+<h2>Energy Efficiency</h2>
+<p>Reduce energy consumption by adapting light intensity based on real-time conditions</p>
 </div>
 <div class="energy">
-<h2 >Real-Time Monitoring</h2>
-<p>Monitor the operational status of individual
-lights effectively.
-</p>
+<h2>Real-Time Monitoring</h2>
+<p>Monitor the operational status of individual lights effectively.</p>
 </div>
 <div class="energy">
 <h2>Proactive Maintenance</h2>
-<p>Receives alerts for maintance needs to
-ensure optimal perfomance
-</p>
+<p>Receives alerts for maintenance needs to ensure optimal performance</p>
 </div>
 </div>
-<CENTER><h1 style="background-color: antiquewhite; margin-top: 40px;" >HOW IT WORKS</h1></CENTER>
+</div>
+    
 <div class="power">
+<h1 class="section-title">HOW IT WORKS</h1>
+<div class="steps">
 <div class="energy1">
-<h2>Step 1: Data collection</h2>
-<p>Ambient light and motions sensors collection
-data in real-time
-</p>
+<h2>Step 1: Data Collection</h2>
+<p>Ambient light and motion sensors collect data in real-time</p>
 </div>
 <div class="energy1">
 <h2>Step 2: Data Transmission</h2>
@@ -195,41 +287,47 @@ data in real-time
 </div>
 <div class="energy1">
 <h2>Step 3: Dynamic Adjustment</h2>
-<p>Light intensity is Adjusted based on analysed data</p>
+<p>Light intensity is adjusted based on analyzed data</p>
 </div>
 </div>
-<center><h1 style="margin-top: 40px;">What Our Users Say</h1></center>
+</div>
+    
+<div class="testimonials">
+<h1 class="section-title">What Our Users Say</h1>
 <div class="users">
 <div class="para">
-<p>Lorem ipsum dolor  adipostrum ipsum ullam repellendus , ullam dmodi fugiat molestiae cum
-</p>
+<p>"The smart street lights have significantly reduced our energy costs while improving safety in our neighborhood."</p>
 </div>
 <div class="para">
-    <p>Lorem ipsum dolor  adipostrum ipsum ullam repellendus , ullam dmodi fugiat molestiae cum
-</p>
+<p>"Easy to install and the monitoring dashboard provides all the information we need to manage our city's lighting."</p>
 </div>
 <div class="para">
-    <p>Lorem ipsum dolor  adipostrum ipsum ullam repellendus , ullam dmodi fugiat molestiae cum
-    </p>
+<p>"The proactive maintenance alerts have saved us countless hours in manual inspections."</p>
 </div>
 </div>
+</div>
+    
 <footer>
 <div class="info">
 <div class="links">
-<h2>Links</h2><br>
-<a href="">Features</a><br><br>
-<a href="">How it works</a><br><br>
-<a href="">Testimonials</a><br><br>
-<a href="">Get Started</a><br><br>
+<h2>Links</h2>
+<a href="">Features</a>
+<a href="">How it works</a>
+<a href="">Testimonials</a>
+<a href="">Get Started</a>
 </div>
 <div class="contact">
-<h2>Contact</h2><br>
+<h2>Contact</h2>
 <p>Kigali, Kicukiro, Gahanga, KK15Rd</p>
 <p>0788355738/0788825478</p>
 <p>smartstreetlighting@gmail.com</p>
 </div>
 <div class="follow">
-
+<h2>Follow us</h2>
+<a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram</a>
+<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i>Facebook</a>
+<a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
 </div>
 </div>
 </footer>
